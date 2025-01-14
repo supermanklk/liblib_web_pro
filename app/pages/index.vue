@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { NButton, NInput } from 'naive-ui'
 definePageMeta({
   layout: 'home',
 })
@@ -8,8 +9,7 @@ const online = useOnline()
 
 <template>
   <div>
-    <Logos mb-6 />
-    <ClientOnly>
+    <!-- <ClientOnly>
       <Suspense>
         <PageView v-if="online" />
         <div v-else text-gray:80>
@@ -26,7 +26,13 @@ const online = useOnline()
           <span animate-pulse>...</span>
         </div>
       </template>
-    </ClientOnly>
-    <InputEntry />
+    </ClientOnly> -->
+
+
+    <div>
+      <n-button type="info">测试按钮-3-3</n-button>
+      <n-input placeholder="请输入" />
+    </div>
+
   </div>
 </template>

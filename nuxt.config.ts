@@ -15,6 +15,22 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
+  build: {
+    transpile:
+      process.env.NODE_ENV === 'production'
+        ? ['naive-ui', 'vueuc', '@css-render/vue3-ssr', '@juggle/resize-observer']
+        : ['@juggle/resize-observer']
+  },
+  vite: {
+    define: {
+      'process.env.DEBUG': false,
+    },
+    // 避免 vite 热更新时出现警告
+    // optimizeDeps: {
+    //   include: ['date-fns-tz/esm/formatInTimeZone']
+    // }
+  },
+
   app: {
     head: {
       viewport: 'width=device-width,initial-scale=1',
@@ -29,13 +45,13 @@ export default defineNuxtConfig({
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
         { name: 'theme-color', media: '(prefers-color-scheme: light)', content: 'white' },
         { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#222222' },
-      ],
+      ]
     },
   },
 
-  css: [
-    '@unocss/reset/tailwind.css',
-  ],
+  // css: [
+  //   '@unocss/reset/tailwind.css',
+  // ],
 
   colorMode: {
     classSuffix: '',

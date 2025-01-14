@@ -9,7 +9,9 @@ useHead({
 <template>
   <VitePwaManifest />
   <NuxtLayout>
-    <NuxtPage />
+    <GlobalConfig>
+      <NuxtPage />
+    </GlobalConfig>
   </NuxtLayout>
 </template>
 
@@ -26,4 +28,6 @@ html.dark {
   background: #222;
   color: white;
 }
+
+
 </style>
