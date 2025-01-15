@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "@unocss/reset": "^65.4.0",
+    "axios": "^1.7.9",
     "date-fns-tz": "^3.2.0",
     "lucide-vue-next": "^0.471.0",
     "naive-ui": "^2.41.0"

@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { NButton, NInput } from 'naive-ui'
+// definePageMeta({
+//   layout: 'home',
+// })
+
 definePageMeta({
-  layout: 'home',
+  layout: 'default',
 })
 
 const online = useOnline()
